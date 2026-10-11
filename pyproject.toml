@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py-feriados"
+version = "1.0.0"
+description = "Base de dados e coletor automatizado de feriados nacionais, estaduais e municipais do Brasil (5.570+ municípios)."
+readme = "README.md"
+authors = [
+    { name = "Lucas Matos Oliveira" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31.0",
+    "rich>=13.7.0",
+]
+keywords = ["feriados", "brasil", "ibge", "scraper", "jsonl", "holidays"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/LucasMatosOliveira/py_feriados"
+Repository = "https://github.com/LucasMatosOliveira/py_feriados"
+
+[project.scripts]
+py-feriados = "scraper.cli:main"
+feriados = "scraper.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scraper*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.jsonl", "*.json"]

@@ -1,0 +1,39 @@
+# Python & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Scraping Checkpoints & Temp Files
+*.tmp
+data/.checkpoint_*.json
+.checkpoint_*.json
+
+# Logs
+logs/
+*.log
+
+# Cache local
+.cache/
+.pytest_cache/
+
+# Node / npm artifacts
+node_modules/
+package-lock.json
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
